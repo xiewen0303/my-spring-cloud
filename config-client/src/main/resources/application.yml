@@ -1,0 +1,33 @@
+spring:
+    application:
+#       表示配置文件名字
+        name: config-client
+    cloud:
+        config:
+            discovery:
+              enabled: true
+#           label表示分支版本
+            label: master
+
+#           profile表示文件名最后-分割的，如：dev,test,pro等。开发环境配置文件
+            profile: dev
+            url: http://localhost:8888
+        discovery:
+          serviceId: config-server
+
+#            http请求地址和资源文件映射如下:
+#             /{application}/{profile}[/{label}]
+#             /{application}-{profile}.yml
+#             /{label}/{application}-{profile}.yml
+#             /{application}-{profile}.properties
+#             /{label}/{application}-{profile}.properties
+#     如发起请求：  http://localhost:8888/config-client/test/master
+#     "spring.config.name"等于{application}参数
+server:
+    port: 8881
+
+#  集成eureka 的集群
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9901/eureka/

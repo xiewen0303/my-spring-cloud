@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+    application:
+        name: config-server
+    cloud:
+        config:
+            server:
+                git:
+                    uri: https://github.com/xiewen0303/testbranch
+#如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写，本例子是公开仓库，放心使用。
+#                    username: xiewen0303
+#                    password: xie6203126wen
+                searchPaths: respo
+#lable 表示分支版本
+            label: master
+
+# 测试地址   http://localhost:8888/config-client/test/master
+
+
+
+#扩展集群
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9901/eureka/
+
+
+
+
