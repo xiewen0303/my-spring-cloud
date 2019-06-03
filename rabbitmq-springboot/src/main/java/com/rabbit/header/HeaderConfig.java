@@ -24,7 +24,6 @@ public class HeaderConfig {
         return new Queue("headersQueue");
     }
 
-
     @Bean
     public Binding bindingQueue2Exchange(@Qualifier("queue") Queue queue,@Qualifier("exchange")HeadersExchange exchange){
         Map<String,Object> headKeys = new HashMap<>();
