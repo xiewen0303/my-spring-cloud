@@ -11,6 +11,8 @@ public class ServiceConsumerApplicationTests {
 
 	@Test
 	public void contextLoads() {
+
+		System.out.println("asdfeff");
 	}
 
 }

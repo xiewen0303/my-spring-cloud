@@ -37,6 +37,7 @@
         <module>service-ribbon</module>
         <module>service-zuul</module>
         <module>my-zookeeper-demo</module>
+        <module>java-rabbitmq</module>
     </modules>
 
     <dependencies>
