@@ -11,7 +11,7 @@
     </parent>
 
     <groupId>com.spring.cloud</groupId>
-    <artifactId>rabbit-springboot</artifactId>
+    <artifactId>rabbitmq-springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    stream:
+      bindings:
+        my_input:                         #通道名称， 接收消息通道和发送消息通道名不可以重复
+          destination: queue.log.message  #可以理解为rabbit的exchange  如果是kafka,则是topic
+          binder: local_rabbit
+          group: mytest-group              # 分组之后，queue会被缓存，消费时只会被一个其中一个消费者消费
+          content-type: application/json  #需要在后台监控页面看到直观的对象数据，需要设置 content-type: application/json。
+        my_output:
+          destination: queue.log.message
+          binder: local_rabbit
+      binders:
+        local_rabbit:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 10.0.0.201
+                port: 5672
+                username: rabbit
+                password: rabbit
+                virtual-host: /

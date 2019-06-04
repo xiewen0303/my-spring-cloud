@@ -38,6 +38,7 @@
         <module>service-zuul</module>
         <module>my-zookeeper-demo</module>
         <module>rabbitmq-springboot</module>
+        <module>rabbit-springcloud-stream</module>
     </modules>
 
     <dependencies>
