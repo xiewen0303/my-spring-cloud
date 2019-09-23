@@ -39,6 +39,7 @@
         <module>my-zookeeper-demo</module>
         <module>rabbitmq-springboot</module>
         <module>rabbit-springcloud-stream</module>
+        <module>web-springboot</module>
     </modules>
 
     <dependencies>

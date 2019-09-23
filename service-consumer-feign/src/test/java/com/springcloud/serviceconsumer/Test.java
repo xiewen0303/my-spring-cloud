@@ -14,7 +14,6 @@ public class Test {
         if (1 != 0) {
             throw new AssertionError();
         }
-
         System.out.println("end DATA1 ");
     }
 }

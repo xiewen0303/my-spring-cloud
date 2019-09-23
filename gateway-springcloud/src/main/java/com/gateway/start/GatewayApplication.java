@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
 
 @SpringBootApplication
 @ComponentScan(basePackages = "com.gateway.action")
-@Import(value = {HystrixConfig.class})
+//@Import(value = {HystrixConfig.class})
 public class GatewayApplication {
 
     public static void main(String[] args) {
